@@ -1,20 +1,25 @@
 {
   "version": 2,
-  "builds": [{ "src": "index.js", "use": "@now/node-server" }],
+  "builds": [{ "src": "src/index.js", "use": "@now/node-server" }],
   "routes": [
     {
+      "src": "/",
+      "dest": "/src/index.js",
+      "methods": ["GET"]
+    },
+    {
       "src": "/todate",
-      "dest": "/￼￼￼.js",
+      "dest": "/src/index.js",
       "methods": ["GET"]
     },
     {
       "src": "/togmt",
-      "dest": "/index.js",
+      "dest": "/src/index.js",
       "methods": ["GET"]
     },
     {
       "src": "/tosp",
-      "dest": "/index.js",
+      "dest": "/src/index.js",
       "methods": ["GET"]
     }
   ]
